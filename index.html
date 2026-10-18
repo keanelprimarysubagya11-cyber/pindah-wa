@@ -36,9 +36,17 @@
       e.preventDefault();
       const nama = document.getElementById('nama').value;
       const nomor = document.getElementById('nomor').value;
-      alert(`Terima kasih! Nama: ${nama}, No WA: ${nomor}`);
+
+      // GANTI SAMA NOMOR WA KAMU SENDIRI (pake format 628...)
+      const nomorKamu = "6285782028739"; 
+
+      const pesan = `Hai! Aku ${nama}. Ini nomor WA aku: ${nomor}`;
+      const urlWA = `https://wa.me/${nomorKamu}?text=${encodeURIComponent(pesan)}`;
+
+      window.location.href = urlWA;
     });
   </script>
+  
 </body>
           </html>
           
