@@ -37,15 +37,29 @@
       const nama = document.getElementById('nama').value;
       const nomor = document.getElementById('nomor').value;
 
-      // GANTI SAMA NOMOR WA KAMU SENDIRI (pake format 628...)
-      const nomorKamu = "6285880525584"; 
-
-      const pesan = `Hai! Aku ${nama}. Ini nomor WA aku: ${nomor}`;
-      const urlWA = `https://wa.me/${nomorKamu}?text=${encodeURIComponent(pesan)}`;
-
-      window.location.href = urlWA;
+      fetch('https://formspree.io/f/xkjoenrd', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          Nama: nama,
+          Nomor_WA: nomor
+        })
+      }).then(response => {
+        if (response.ok) {
+          alert('Makasihhh yaa');
+          form.reset();
+        } else {
+          alert('Yahh gagal lho yaa😕😕.');
+        }
+      }).catch(error => {
+        alert('Terjadi kesalahan koneksi.');
+      });
     });
   </script>
+  
   
 </body>
           </html>
