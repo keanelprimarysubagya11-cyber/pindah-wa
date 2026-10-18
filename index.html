@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pindah WA Yuk?</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0f1117] text-white min-h-screen flex items-center justify-center p-4 font-sans">
+
+  <div class="bg-[#161922] border border-gray-800 p-6 rounded-2xl max-w-sm w-full text-center shadow-2xl">
+    <!-- Gambar Kucing Meme -->
+    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=300" alt="Meme Cat" class="w-28 h-28 object-cover rounded-2xl mx-auto mb-4 border border-gray-700">
+    
+    <!-- Judul & Subjudul -->
+    <h1 class="text-xl font-bold mb-1">Pindah WhatsApp Aja Ga Si?</h1>
+    <p class="text-gray-400 text-sm mb-6">hehehehehehehehe</p>
+    
+    <!-- Form Input -->
+    <form id="contactForm" class="text-left space-y-4">
+      <div>
+        <label class="block text-xs font-medium text-gray-400 mb-1">Preferable contact name</label>
+        <input type="text" id="nama" placeholder="untuk di contact ku" required class="w-full bg-[#1e222d] border border-gray-700 rounded-lg p-3 text-sm focus:outline-none focus:border-white text-white placeholder-gray-500">
+      </div>
+      <div>
+        <label class="block text-xs font-medium text-gray-400 mb-1">Nomor WhatsApp</label>
+        <input type="tel" id="nomor" placeholder="08xxxxxxxxxx" required class="w-full bg-[#1e222d] border border-gray-700 rounded-lg p-3 text-sm focus:outline-none focus:border-white text-white placeholder-gray-500">
+      </div>
+      <button type="submit" class="w-full bg-white text-black font-semibold py-3 rounded-lg hover:bg-gray-200 transition mt-2">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nama = document.getElementById('nama').value;
+      const nomor = document.getElementById('nomor').value;
+      alert(`Terima kasih! Nama: ${nama}, No WA: ${nomor}`);
+    });
+  </script>
+</body>
+          </html>
+          
